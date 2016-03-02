@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Bounce</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="container">
+    <canvas id="canvas">Your browser does not support canvas.</canvas>
+    <div class="panel starting">
+        <h1 class="tip">
+            tap to start
+        </h1>
+        <h1 class="bouncetip">
+            tap to bounce
+        </h1>
+        <p class="highscore">
+            <span class="label">highscore:</span>
+            <span class="numeric">0</span>
+        </p>
+        <p class="played">
+            <span class="label">played:</span>
+            <span class="numeric">0</span>
+        </p>
+        <button class="btn-restart">restart</button>
+    </div>
+</div>
+<script src="js/animframe_polyfill.js"></script>
+<script src="js/bind_polyfill.js"></script>
+<script src="js/classlist_polyfill.js"></script>
+<script src="js/hidpi_canvas_polyfill.js"></script>
+<script src="js/PubSub.js"></script>
+<script src="js/Storage.js"></script>
+<script src="js/Sprites.js"></script>
+<script src="js/Renderer.js"></script>
+<script src="js/InputManager.js"></script>
+<script src="js/Game.js"></script>
+<script>
+    requestAnimationFrame(function () {
+        window.game = new Game();
+    });
+    function gripperMsgRecieved(stats) {
+        if (stats.devices[0].stat.status === true) {
+            P("gripper");
+        }
+    }
+</script>
+</body>
+</html>

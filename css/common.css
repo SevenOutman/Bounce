@@ -1,0 +1,92 @@
+html,
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Lato, "Helvetica Neue", open-sans, monospace, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    /*padding-top: 20px;*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tip{
+    font-weight: normal;
+    text-align: center;
+    color: #D3D6DD;
+    display: none;
+}
+
+.bouncetip {
+    font-weight: normal;
+    text-align: center;
+    color: #D3D6DD;
+}
+
+.highscore,
+.played {
+    color: #44BED8;
+    width: 75%;
+    margin: 20px auto;
+    font-size: 3rem;
+    display: none;
+}
+
+.label {
+    /*float: left;*/
+}
+
+.numeric {
+    float: right;
+}
+
+.btn-restart {
+    -webkit-appearance: none;
+    outline: none;
+    height: 50px;
+    width: 70%;
+    margin: 40px auto;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #44BED8;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.starting .tip {
+    display: block;
+}
+
+.gameover .highscore,
+.gameover .played,
+.gameover .btn-restart {
+    display: block;
+}
+
+.starting .bouncetip,
+.gameover .bouncetip {
+    display: none;
+}
